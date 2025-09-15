@@ -1,3 +1,40 @@
+## PHP Telegram Bot: Instagram Reels song detector (AudD)
+
+### Requirements
+- PHP 7.4+ with cURL enabled (available on typical cPanel)
+- A publicly accessible HTTPS URL (your cPanel domain)
+- Telegram Bot token (from @BotFather)
+- AudD API token (`https://audd.io`)
+
+### Files
+- `config.php` – set your tokens here (or via environment variables)
+- `public/webhook.php` – Telegram webhook endpoint
+- `lib/TelegramBot.php` – minimal Telegram client
+- `lib/AuddClient.php` – AudD API client
+
+### Deployment on cPanel
+1. Create a folder in your hosting, e.g. `bot/` and upload all files preserving the structure. Ensure `public/webhook.php` is reachable via HTTPS, e.g. `https://yourdomain.com/bot/public/webhook.php`.
+2. Edit `config.php` and replace `REPLACE_WITH_TELEGRAM_BOT_TOKEN` and `REPLACE_WITH_AUDD_API_TOKEN` with your real tokens.
+3. In Telegram, set the webhook:
+
+```bash
+curl -s "https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/setWebhook" \
+  -d url="https://yourdomain.com/bot/public/webhook.php"
+```
+
+Check webhook info:
+
+```bash
+curl -s "https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/getWebhookInfo" | jq .
+```
+
+### Usage
+Send an Instagram Reels link to your bot. The bot replies with the detected song title and artist. Make sure the Reel is public/viewable.
+
+### Notes
+- AudD recognizes audio available through the provided URL. For private or region-locked content, recognition may fail.
+- If your hosting enforces firewall rules, allow outbound HTTPS to `api.audd.io` and `api.telegram.org`.
+
 # LiveProto
 
 <p>
