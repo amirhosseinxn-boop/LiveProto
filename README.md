@@ -1,3 +1,54 @@
+## Telegram Song Recognition Bot (PHP, cPanel)
+
+This is a lightweight PHP webhook for a Telegram bot that recognizes songs from `audio`, `voice`, or `video` messages using the Audd API, suitable for typical cPanel hosting without Composer.
+
+### Files
+- `index.php`: Webhook handler. Receives updates, downloads the file via Telegram API, calls Audd, and replies.
+- `config.php`: Configuration constants (tokens and optional webhook secret).
+
+### Requirements
+- PHP 7.4+ with cURL enabled (most cPanel hosts have this)
+- A public HTTPS URL (use your cPanel domain or subdomain)
+- Telegram Bot Token from BotFather
+- Audd API token (`https://audd.io/`)
+
+### Deployment (cPanel)
+1. Create a folder under your domain (e.g., `public_html/bot`).
+2. Upload `index.php` and `config.php` to that folder.
+3. Edit `config.php` and set:
+   - `TELEGRAM_BOT_TOKEN`
+   - `AUDD_API_TOKEN`
+   - Optionally `WEBHOOK_SECRET`
+4. Open your domain to verify PHP runs (a blank `ok` JSON is fine).
+
+### Set Telegram Webhook
+Replace values and open this URL in your browser:
+
+```
+https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/setWebhook?url=https://your-domain.com/bot/index.php
+```
+
+If using a secret:
+
+```
+https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/setWebhook?url=https://your-domain.com/bot/index.php?secret=YOUR_SECRET
+```
+
+To remove webhook:
+
+```
+https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/deleteWebhook
+```
+
+### Usage
+- Send a voice note, an audio file (mp3), or a short video (mp4) to your bot.
+- The bot will attempt recognition and reply with title, artist, and links.
+
+### Notes
+- For documents: Users sending mp3/mp4 as a document are supported.
+- Large files: Telegram may expire file URLs quickly; resend if it fails.
+- Rate limits: Audd has quotas; handle accordingly for production.
+
 # LiveProto
 
 <p>
