@@ -1,0 +1,58 @@
+{
+  "categories": [
+    { "id": "coffee-hot", "title": "نوشیدنی‌های گرم" },
+    { "id": "coffee-cold", "title": "نوشیدنی‌های سرد" },
+    { "id": "dessert", "title": "کیک و دسر" }
+  ],
+  "items": [
+    {
+      "id": "espresso",
+      "categoryId": "coffee-hot",
+      "title": "اسپرسو",
+      "description": "قهوه ناب با عصاره‌گیری استاندارد",
+      "priceTomans": 65000,
+      "image": "images/espresso.jpg"
+    },
+    {
+      "id": "cappuccino",
+      "categoryId": "coffee-hot",
+      "title": "کاپوچینو",
+      "description": "قهوه با فوم شیر مخملی",
+      "priceTomans": 98000,
+      "image": "images/cappuccino.jpg"
+    },
+    {
+      "id": "americano",
+      "categoryId": "coffee-hot",
+      "title": "آمریکانو",
+      "description": "قهوه رقیق‌شده با آب داغ",
+      "priceTomans": 78000,
+      "image": "images/americano.jpg"
+    },
+    {
+      "id": "iced-latte",
+      "categoryId": "coffee-cold",
+      "title": "آیس لاته",
+      "description": "قهوه و شیر روی یخ",
+      "priceTomans": 115000,
+      "image": "images/iced-latte.jpg"
+    },
+    {
+      "id": "lemonade",
+      "categoryId": "coffee-cold",
+      "title": "لیموناد تازه",
+      "description": "خنک و ترش‌مزه",
+      "priceTomans": 90000,
+      "image": "images/lemonade.jpg"
+    },
+    {
+      "id": "cheesecake",
+      "categoryId": "dessert",
+      "title": "چیزکیک",
+      "description": "با سس توت‌فرنگی",
+      "priceTomans": 120000,
+      "image": "images/cheesecake.jpg"
+    }
+  ]
+}
+
