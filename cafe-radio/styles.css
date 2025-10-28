@@ -1,0 +1,64 @@
+/* Base RTL theme: white & cafe red */
+:root{
+  --cafe-red:#d62828;/* main red */
+  --cafe-red-600:#b81f1f;
+  --bg:#ffffff;
+  --text:#1a1a1a;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --border:#efefef;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Vazirmatn",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,\"Noto Sans\",\"Helvetica Neue\",Arial; 
+  background:var(--bg); color:var(--text);
+}
+.site-header{
+  position:sticky;top:0;z-index:10;
+  backdrop-filter:saturate(1.1) blur(6px);
+  background:rgba(255,255,255,0.85);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:12px 16px;
+}
+.brand{display:flex;align-items:center;gap:10px}
+.brand .logo{width:36px;height:36px}
+.brand h1{font-size:20px;margin:0;color:var(--cafe-red)}
+.search-wrap{flex:1;display:flex;justify-content:flex-end}
+.search-wrap input{
+  width:min(520px,100%);
+  padding:10px 12px;border:1px solid var(--border);border-radius:10px;
+  outline:none; font-size:14px;
+}
+.container{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:16px;align-items:start}
+.categories{
+  position:sticky;top:70px;align-self:start;
+  background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px;
+}
+.categories .cat-btn{
+  width:100%;text-align:right;border:0;background:transparent;padding:10px;border-radius:8px;cursor:pointer;
+}
+.categories .cat-btn.active{background:var(--cafe-red);color:#fff}
+.menu .grid{
+  display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:16px;
+}
+.card{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--card);display:flex;flex-direction:column}
+.card-img{width:100%;height:160px;object-fit:cover;background:#f6f6f6}
+.card-body{padding:12px}
+.card-title{margin:0 0 8px 0;font-size:16px}
+.card-meta{display:flex;align-items:center;justify-content:space-between}
+.price{color:var(--cafe-red);font-weight:700}
+
+.site-footer{display:flex;justify-content:center;padding:24px;color:var(--muted);border-top:1px solid var(--border)}
+
+/* Responsive */
+@media (max-width: 960px){
+  .container{grid-template-columns:1fr}
+  .categories{position:static;display:flex;flex-wrap:wrap;gap:8px}
+  .categories .cat-btn{flex:1 0 calc(33.33% - 8px);border:1px solid var(--border)}
+  .menu .grid{grid-template-columns:repeat(2, minmax(0,1fr))}
+}
+@media (max-width: 520px){
+  .menu .grid{grid-template-columns:1fr}
+}

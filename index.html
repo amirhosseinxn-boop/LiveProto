@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>کافه رادیو | منوی آنلاین</title>
+    <meta name="description" content="منوی آنلاین کافه رادیو - مشاهده‌ٔ نوشیدنی‌ها و خوراکی‌ها همراه با قیمت" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">☕</div>
+        <div class="titles">
+          <h1>کافه رادیو</h1>
+          <p class="subtitle">منوی آنلاین</p>
+        </div>
+      </div>
+
+      <label class="search" for="search-input">
+        <input id="search-input" type="search" placeholder="جستجو: قهوه، نوشیدنی سرد، کیک ..." autocomplete="off" />
+        <span class="icon" aria-hidden="true">🔎</span>
+      </label>
+    </header>
+
+    <nav id="category-chips" class="chips" aria-label="دسته‌بندی‌ها">
+      <!-- Filled dynamically -->
+    </nav>
+
+    <main id="menu" class="menu">
+      <!-- Menu categories and items rendered here -->
+    </main>
+
+    <footer class="site-footer">
+      <small>© <span id="year"></span> کافه رادیو — طعم خوب قهوه</small>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+  </html>
+

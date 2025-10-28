@@ -1,0 +1,11 @@
+{
+  "items": [
+    {"id":1, "title":"قهوه اسپرسو", "en":"Espresso", "category":"نوشیدنی های گرم", "price_rial": 180000, "image":"assets/img/espresso.jpg"},
+    {"id":2, "title":"کاپوچینو", "en":"Cappuccino", "category":"نوشیدنی های گرم", "price_rial": 220000, "image":"assets/img/cappuccino.jpg"},
+    {"id":3, "title":"لاته", "en":"Latte", "category":"نوشیدنی های گرم", "price_rial": 230000, "image":"assets/img/latte.jpg"},
+    {"id":4, "title":"موکا", "en":"Mocha", "category":"نوشیدنی های گرم", "price_rial": 240000, "image":"assets/img/mocha.jpg"},
+    {"id":5, "title":"آیس کافی", "en":"Iced Coffee", "category":"نوشیدنی های سرد", "price_rial": 200000, "image":"assets/img/iced-coffee.jpg"},
+    {"id":6, "title":"چای سیاه", "en":"Black Tea", "category":"نوشیدنی های گرم", "price_rial": 120000, "image":"assets/img/tea.jpg"},
+    {"id":7, "title":"چیزکیک", "en":"Cheesecake", "category":"دسر", "price_rial": 260000, "image":"assets/img/cheesecake.jpg"}
+  ]
+}

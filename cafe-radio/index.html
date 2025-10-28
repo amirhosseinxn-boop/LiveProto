@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>کافه رادیو | منو</title>
+  <meta name="description" content="منوی کافه رادیو - مشاهده قیمت و عکس محصولات">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/img/logo.svg" alt="کافه رادیو" class="logo" onerror="this.style.display='none'">
+      <h1>کافه رادیو</h1>
+    </div>
+    <div class="search-wrap">
+      <input id="searchInput" type="search" placeholder="جستجو در منو... (مثلاً قهوه)">
+    </div>
+  </header>
+
+  <main class="container">
+    <aside class="categories" id="categoryList"></aside>
+    <section class="menu">
+      <div id="menuGrid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© <span id="year"></span> کافه رادیو</div>
+  </footer>
+
+  <template id="itemCardTemplate">
+    <article class="card">
+      <img class="card-img" alt="" loading="lazy">
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <div class="card-meta">
+          <span class="price"></span>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
